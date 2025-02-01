@@ -91,6 +91,9 @@ def harsh():
 
 
 if __name__=="__main__":
+    port = int(os.environ.get("PORT", 5000))
     app.secret_key='Itissecret'
     app.debug= True
     app.run()
+    subprocess.Popen(["bash", "startngrok.sh"])
+    app.run(host="0.0.0.0", port=port)
