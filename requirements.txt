@@ -1,0 +1,9 @@
+# Specify Python version
+python==3.9
+
+# Required dependencies
+flask
+requests
+ngrok
+google-cloud-dialogflow
+gunicorn
