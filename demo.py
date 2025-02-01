@@ -7,6 +7,8 @@ import pandas as pd
 from flask import send_from_directory, request
 
 app = flask.Flask(__name__)
+app.secret_key='Itissecret'
+app.debug= True
 
 @app.route('/favicon.ico')
 def favicon():
@@ -92,8 +94,6 @@ def harsh():
 
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.secret_key='Itissecret'
-    app.debug= True
-    app.run()
+    
     subprocess.Popen(["bash", "startngrok.sh"])
     app.run(host="0.0.0.0", port=port)
