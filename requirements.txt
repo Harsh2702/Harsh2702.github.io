@@ -3,6 +3,7 @@
 
 # Required dependencies
 flask
+openmeteo_requests
 requests
 ngrok
 google-cloud-dialogflow
