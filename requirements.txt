@@ -13,6 +13,6 @@ pandas
 retry_requests
 datetime
 numpy
-subprocess
+#subprocess
 #json
 #os
