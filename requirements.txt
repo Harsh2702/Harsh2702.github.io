@@ -10,3 +10,8 @@ google-cloud-dialogflow
 gunicorn
 requests_cache
 pandas
+retry_requests
+datetime
+numpy
+json
+os
