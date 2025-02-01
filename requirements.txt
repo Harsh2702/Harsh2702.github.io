@@ -9,3 +9,4 @@ ngrok
 google-cloud-dialogflow
 gunicorn
 requests_cache
+pandas
