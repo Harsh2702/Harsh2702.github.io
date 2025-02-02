@@ -8,8 +8,7 @@ from flask import send_from_directory, request
 import subprocess
 
 app = flask.Flask(__name__)
-app.secret_key='Itissecret'
-app.debug= True
+
 
 @app.route('/favicon.ico')
 def favicon():
@@ -94,6 +93,8 @@ def demo():
 
 
 if __name__=="__main__":
+    app.secret_key='Itissecret'
+    app.debug= True
     Port = int(os.environ.get("PORT", 10000))
 
     with open("startngrok.sh", "r") as file:
