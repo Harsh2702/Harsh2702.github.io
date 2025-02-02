@@ -94,7 +94,7 @@ def harsh():
 
 
 if __name__=="__main__":
-    port = int(os.environ.get("PORT", 5000))
+    Port = int(os.environ.get("PORT", 10000))
 
     with open("startngrok.sh", "r") as file:
         script_content = file.read().replace("\r", "")  # Remove '\r' characters
@@ -106,4 +106,4 @@ if __name__=="__main__":
     subprocess.run(["chmod", "+x", "startngrok.sh"])
     
     subprocess.Popen(["bash", "startngrok.sh"])
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=Port)
