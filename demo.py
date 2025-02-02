@@ -22,7 +22,7 @@ def home():
     return get_weather(52.52,13.41)
 
 @app.route('/demo',methods=['POST'])
-def harsh():
+def demo():
     req=request.get_json(force=True)
     # print(req)
     print(req['queryResult']['intent']['displayName'],"---------------")
