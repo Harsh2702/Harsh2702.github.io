@@ -95,6 +95,15 @@ def harsh():
 
 if __name__=="__main__":
     port = int(os.environ.get("PORT", 5000))
+
+    with open("startngrok.sh", "r") as file:
+        script_content = file.read().replace("\r", "")  # Remove '\r' characters
+    
+    with open("startngrok.sh", "w") as file:
+        file.write(script_content)  # Save the fixed script
+    
+    # Ensure the script is executable (Render should respect this)
+    subprocess.run(["chmod", "+x", "startngrok.sh"])
     
     subprocess.Popen(["bash", "startngrok.sh"])
     app.run(host="0.0.0.0", port=port)
