@@ -9,15 +9,17 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('https://cdn.vectorstock.com/i/500p/53/62/weather-infographic-line-climate-forecast-banner-vector-42465362.jpg'); /* Change this to your own image if needed */
-
+      background-image: url('https://cdn.vectorstock.com/i/500p/53/62/weather-infographic-line-climate-forecast-banner-vector-42465362.jpg'); /* Replace with your own if needed */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .container {
       max-width: 500px;
       margin: 50px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -29,18 +31,6 @@
       font-weight: bold;
       margin-bottom: 20px;
     }
-
-    .placeholder {
-      width: 100%;
-      height: 400px;
-      background-color: #e0e0e0;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-      font-size: 18px;
-    }
   </style>
 
   <!-- Dialogflow Messenger Script -->
@@ -49,9 +39,6 @@
 <body>
   <div class="container">
     <h1>Weather Forecast Chatbot</h1>
-    <div class="placeholder">
-      Use the chat icon at bottom right →
-    </div>
   </div>
 
   <!-- Dialogflow Messenger Widget -->
