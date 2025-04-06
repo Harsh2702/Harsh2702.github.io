@@ -11,31 +11,37 @@
       padding: 0;
       background-color: #f9f9f9;
     }
-
-   
-
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
     h1 {
       color: #333;
       font-size: 24px;
-      font-weight: bold;
       margin-bottom: 20px;
+      font-weight: bold;
     }
   </style>
-
-  <!-- Dialogflow Messenger Script -->
+  <!-- Load Dialogflow Messenger -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
   <div class="container">
     <h1>Weather Forecast Chatbot</h1>
+    <!-- The Dialogflow widget will float in bottom right -->
   </div>
 
-  <!-- Dialogflow Messenger Widget -->
+  <!-- Dialogflow Messenger Component -->
   <df-messenger
     intent="WELCOME"
     chat-title="WeatherBot"
     agent-id="e085fa5e-f692-42e5-8871-9341bc47093c"
-    language-code="en">
-  </df-messenger>
+    language-code="en"
+  ></df-messenger>
 </body>
 </html>
