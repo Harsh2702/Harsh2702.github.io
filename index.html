@@ -26,6 +26,17 @@
       margin-bottom: 20px;
       font-weight: bold;
     }
+    .left-aligned-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      margin-left: 50px;
+    }
+    .left-aligned-list li {
+      font-size: 18px;
+      color: #333;
+      margin: 5px 0;
+    }
   </style>
   <!-- Load Dialogflow Messenger -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
@@ -35,6 +46,27 @@
     <h1>Weather Forecast Chatbot</h1>
     <!-- The Dialogflow widget will float in bottom right -->
   </div>
+
+  <!-- List of weather parameters -->
+  <ul class="left-aligned-list">
+    <li>Cloudcover</li>
+    <li>Currenthumidity</li>
+    <li>Currentoverviewweather</li>
+    <li>Currenttemp</li>
+    <li>Dailydaylightduration</li>
+    <li>Dailyfeelsliketempmax</li>
+    <li>Dailyfeelsliketempmin</li>
+    <li>Dailyprecipitationprobabilitymax</li>
+    <li>Dailyrainsum</li>
+    <li>Dailysnowfallsum</li>
+    <li>Dailytempmax</li>
+    <li>Dailytempmin</li>
+    <li>Dailywindspeedmax</li>
+    <li>Feelsliketemp</li>
+    <li>forecastoverview</li>
+    <li>Nightduration</li>
+    <li>Visibility</li>
+  </ul>
 
   <!-- Dialogflow Messenger Component -->
   <df-messenger
