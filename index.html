@@ -1,71 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Forecast Chatbot</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      color: #333;
-      font-size: 24px;
-      margin: 0;
-      font-weight: bold;
-    }
-
-    .chat-wrapper {
-      position: relative;
-      height: 600px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    df-messenger {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Override default styles to remove floating button */
-    df-messenger .chat-wrapper {
-      all: unset;
-    }
-  </style>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 90.25%;
+            height: 0;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Weather Forecast Chatbot</h1>
+    <div class="container">
+        <div class="header">
+            <h1>Weather Forecast Chatbot</h1>
+        </div>
+        <div class="iframe-container">
+            <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e085fa5e-f692-42e5-8871-9341bc47093c"></iframe>
+        </div>
     </div>
-    <div class="chat-wrapper">
-      <df-messenger
-        intent="WELCOME"
-        chat-title="WeatherBot"
-        agent-id="e085fa5e-f692-42e5-8871-9341bc47093c"
-        language-code="en">
-      </df-messenger>
-    </div>
-  </div>
 </body>
 </html>
