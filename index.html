@@ -5,23 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather Forecast Chatbot</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      background-image: url('https://cdn.vectorstock.com/i/500p/53/62/weather-infographic-line-climate-forecast-banner-vector-42465362.jpg'); /* Replace with your own if needed */
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url('https://cdn.vectorstock.com/i/500p/53/62/weather-infographic-line-climate-forecast-banner-vector-42465362.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
-
-   
 
     h1 {
       color: #333;
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin: 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      flex-direction: column;
     }
   </style>
 
