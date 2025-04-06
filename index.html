@@ -27,21 +27,22 @@
       font-weight: bold;
     }
   </style>
-  <!-- Load Dialogflow Messenger -->
+
+  <!-- Load Dialogflow Messenger via Bootstrap -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
   <div class="container">
     <h1>Weather Forecast Chatbot</h1>
-    <!-- The Dialogflow widget will float in bottom right -->
+    <p>Ask me about the weather in your city!</p>
   </div>
 
-  <!-- Dialogflow Messenger Component -->
+  <!-- Dialogflow Messenger Widget -->
   <df-messenger
     intent="WELCOME"
     chat-title="WeatherBot"
     agent-id="e085fa5e-f692-42e5-8871-9341bc47093c"
-    language-code="en"
-  ></df-messenger>
+    language-code="en">
+  </df-messenger>
 </body>
 </html>
