@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Weather Forecast Chatbot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast Chatbot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f0f0f0;
+      background-color: #f9f9f9;
     }
 
     .container {
@@ -19,49 +19,53 @@
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
       text-align: center;
+      margin-bottom: 20px;
     }
 
-    .chat-header {
-      font-size: 24px;
-      font-weight: bold;
+    h1 {
       color: #333;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin: 0;
+      font-weight: bold;
     }
 
-    .chat-info {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 30px;
+    .chat-wrapper {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+      border-radius: 8px;
     }
 
-    /* Make the chat widget feel like it's inside a div */
     df-messenger {
-      --df-messenger-button-titlebar-color: #4285f4;
-      --df-messenger-chat-background-color: #f4f4f4;
-      --df-messenger-font-color: #000;
-      --df-messenger-send-icon: #4285f4;
-      --df-messenger-user-message: #e0e0e0;
-      --df-messenger-bot-message: #fff;
-      z-index: 999;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Override default styles to remove floating button */
+    df-messenger .chat-wrapper {
+      all: unset;
     }
   </style>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
-
   <div class="container">
-    <div class="chat-header">Weather Forecast Chatbot</div>
-    <div class="chat-info">Use the floating chat icon at the bottom right to talk to the bot</div>
+    <div class="header">
+      <h1>Weather Forecast Chatbot</h1>
+    </div>
+    <div class="chat-wrapper">
+      <df-messenger
+        intent="WELCOME"
+        chat-title="WeatherBot"
+        agent-id="e085fa5e-f692-42e5-8871-9341bc47093c"
+        language-code="en">
+      </df-messenger>
+    </div>
   </div>
-
-  <!-- Dialogflow Chat Widget (Floating but styled like embedded) -->
-  <df-messenger
-    intent="WELCOME"
-    chat-title="WeatherBot"
-    agent-id="e085fa5e-f692-42e5-8871-9341bc47093c"
-    language-code="en">
-  </df-messenger>
-
 </body>
 </html>
