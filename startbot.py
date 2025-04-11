@@ -10,7 +10,7 @@ print("[✔] Flask app started...")
 time.sleep(5)  # You can adjust this if needed
 
 # Step 3: Start Ngrok tunnel
-port = 5000  # or the port your Flask app uses
+port = 10000  # or the port your Flask app uses
 public_url = ngrok.connect(port, "http")
 print(f"[✔] Ngrok tunnel established:-- {public_url.public_url+"/demo"}")
 
