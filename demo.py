@@ -23,9 +23,9 @@ def home():
 @app.route('/demo', methods=["GET",'POST',"HEAD"])
 def demo():
         
-        print(f"Request Method: {request.method}")
-        if request.method == "GET" or request.method == "HEAD":
-                return ("pass", 200)
+    print(f"Request Method: {request.method}")
+    if request.method == "GET" or request.method == "HEAD":
+            return ("pass", 200)
     req = request.get_json(force=True)
     print(req['queryResult']['intent']['displayName'], "---------------")
     
