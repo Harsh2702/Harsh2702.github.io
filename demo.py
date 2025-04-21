@@ -90,6 +90,7 @@ if __name__ == "__main__":
     app.secret_key = 'Itissecret'
     app.debug = True
     Port = int(os.environ.get("PORT", 10000))
-
+    with open("cordinates.csv", "w") as f:
+        f.write("lat,long\n")
     # Remove Ngrok startup code since it's not required on Render
     app.run(host="0.0.0.0", port=Port)
