@@ -116,7 +116,7 @@ def get_weather(lat=52.52,long=13.41):
     daily_apparent_temperature_max = np.round(daily.Variables(3).ValuesAsNumpy()).astype(int) # celcius
     daily_apparent_temperature_min = np.round(daily.Variables(4).ValuesAsNumpy()).astype(int) # celcius
     daily_daylight_duration = np.round(daily.Variables(5).ValuesAsNumpy()/3600).astype(int) # hours
-    Nightduration = [abs(x - 24) for x in daily_daylight_duration] # hours
+    Nightduration = [int(abs(x - 24)) for x in daily_daylight_duration] # hours
     daily_rain_sum = np.round(daily.Variables(6).ValuesAsNumpy()/10).astype(int) # cms
     daily_snowfall_sum = daily.Variables(7).ValuesAsNumpy().astype(int) # cms
     daily_precipitation_probability_max = daily.Variables(8).ValuesAsNumpy().astype(int) # percent
