@@ -16,9 +16,11 @@ def favicon():
 @app.route('/', methods=["GET", "POST"])
 @app.route('/home')
 def home():
+        if request.method == "GET" or request.method == "HEAD":
+                return ("pass", 200)
     return get_weather(52.52, 13.41)
 
-@app.route('/demo', methods=["GET",'POST'])
+@app.route('/demo', methods=["GET",'POST',"HEAD"])
 def demo():
     if request.method == "GET" or request.method == "HEAD":
         return ("pass", 200)
