@@ -17,7 +17,7 @@ def favicon():
 def home():
     return get_weather(52.52, 13.41)
 
-@app.route('/demo', methods=['POST'])
+@app.route('/demo', methods=["GET",'POST'])
 def demo():
     req = request.get_json(force=True)
     print(req['queryResult']['intent']['displayName'], "---------------")
