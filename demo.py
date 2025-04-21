@@ -19,8 +19,8 @@ def home():
 
 @app.route('/demo', methods=["GET",'POST'])
 def demo():
-    if request.method == "GET":
-        return ("This is a webhook endpoint for POST requests.", 200)
+    if request.method == "GET" or request.method == "HEAD":
+        return ("pass", 200)
     req = request.get_json(force=True)
     print(req['queryResult']['intent']['displayName'], "---------------")
     
