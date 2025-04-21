@@ -22,12 +22,16 @@ def home():
 
 @app.route('/demo', methods=["GET",'POST',"HEAD"])
 def demo():
-        
+    print("1")
     print(f"Request Method: {request.method}")
+    print("2")
     if request.method == "GET" or request.method == "HEAD":
             return ("pass", 200)
+    print("3")
     req = request.get_json(force=True)
+    print("4")
     print(req['queryResult']['intent']['displayName'], "---------------")
+    print("5")
     
     if req['queryResult']['intent']['displayName'] == 'Default Welcome Intent - custom':
         number = req['queryResult']['queryText'].split(',')
