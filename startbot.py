@@ -14,6 +14,9 @@ port = 10000  # or the port your Flask app uses
 public_url = ngrok.connect(port, "http")
 print(f"[✔] Ngrok tunnel established:-- {public_url.public_url+"/demo"}")
 
+sim_process = subprocess.Popen(["python", "keep_alive.py"])
+print("[✔] Keep-alive simulation script started...")
+
 # Optional: Save URL to a file for easy access
 with open("webhook_url.txt", "w") as f:
     f.write(str(public_url.public_url+"/demo"))
@@ -23,4 +26,5 @@ input("Press ENTER to quit and terminate the server...\n")
 
 # Step 4: Clean up
 flask_process.terminate()
+sim_process.terminate()
 ngrok.kill()
