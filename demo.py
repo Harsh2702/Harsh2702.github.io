@@ -22,16 +22,11 @@ def home():
 
 @app.route('/demo', methods=["GET",'POST',"HEAD"])
 def demo():
-    print("1")
     print(f"Request Method: {request.method}")
-    print("2")
     if request.method == "GET" or request.method == "HEAD":
             return ("pass", 200)
-    print("3")
     req = request.get_json(force=True)
-    print("4")
     print(req['queryResult']['intent']['displayName'], "---------------")
-    print("5")
     
     if req['queryResult']['intent']['displayName'] == 'Default Welcome Intent - custom':
         number = req['queryResult']['queryText'].split(',')
@@ -99,5 +94,4 @@ if __name__ == "__main__":
     app.secret_key = 'Itissecret'
     app.debug = True
     Port = int(os.environ.get("PORT", 10000))
-    # Remove Ngrok startup code since it's not required on Render
     app.run(host="0.0.0.0", port=Port)
